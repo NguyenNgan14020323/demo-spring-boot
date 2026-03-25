@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	@Transactional
 	public User addUser(UserDto userDto) {
+		// Test feature 001
 		Department department = deparmentRepository.findById(userDto.getDepartmentId()).get();
 		User user = User.builder()
 				.name(userDto.getName())
